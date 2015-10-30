@@ -1,5 +1,5 @@
 # trainingwheel.sh Testing a simple command line script deployment
-FROM trainingwheelsh
+FROM ubuntu
 LABEL version="0.1"
 
 RUN mkdir train
