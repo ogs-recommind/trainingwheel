@@ -2,7 +2,7 @@
 FROM ubuntu
 LABEL version="0.1"
 
-CMD train/trainingwheel.sh
+CMD trainingwheel.sh
 
 # RUN mkdir train
 # COPY trainingwheel.sh train
