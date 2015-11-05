@@ -10,7 +10,7 @@ LABEL version="0.1"
 #ADD places our script into the Docker Container
 ADD trainingwheel.sh trainingwheel.sh
 
-COPY trainingwheel.sh /bin/sh/trainingwheel.sh
+# COPY trainingwheel.sh /bin/sh/trainingwheel.sh
 
 #Entrypoint declares a defult application
 ENTRYPOINT  trainingwheel.sh
