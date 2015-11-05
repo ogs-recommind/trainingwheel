@@ -1,6 +1,6 @@
 #!/bin/bash
-mkdir testarea
-cd testarea
-touch CreatedFile
+mkdir /root/testarea
+#cd testarea
+touch /root/testarea/CreatedFile
 echo "File Created."
 ls 
