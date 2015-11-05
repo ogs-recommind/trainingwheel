@@ -1,15 +1,18 @@
-#FROM ubuntu:14.04
-#MAINTAINER Matt Oliver <matt@oliver.com>
+FROM ubuntu:14.04
+MAINTAINER Matt Oliver <matt@oliver.com>
 CMD ping localhost -t 5
 
-#RUN apt-get update && apt-get install -y ruby ruby-dev apache2 icinga
-#RUN gem install sinatra
-#RUN touch /root/olver_is_awesome
+RUN apt-get update && apt-get install -y apache2 vim
+# Manually set up the apache environment variables
+ENV APACHE_RUN_USER www-data
+ENV APACHE_RUN_GROUP www-data
+ENV APACHE_LOG_DIR /var/log/apache2/
+ENV APACHE_PID_FILE /var/run/apache2.pid
+ENV APACHE_LOCK_DIR /var/lock/apache2/
 
-#EXPOSE 80
+EXPOSE 80
 
-#RUN service apache2 start
-
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
 
 
 
