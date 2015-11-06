@@ -8,16 +8,15 @@ MAINTAINER "Cloud Orchestration"
 LABEL version="0.1"
 
 #ADD places our script into the Docker Container
-ADD trainingwheel.sh /root/trainingwheel.sh
-
+ADD trainingwheel.sh /bin/trainingwheel.sh
+CMD /bin/sh /bin/trainingwheel.sh
 # COPY trainingwheel.sh /bin/sh/trainingwheel.sh
 
 #Entrypoint declares a defult application
-CMD echo "With Entrypoint we now cause the install to start our script here"
-ENTRYPOINT  /root/trainingwheel.sh
+#ENTRYPOINT  trainingwheel.sh
 
 
-
+#CMD "With Entrypoint we now cause the install to start our script here"
 
 # RUN mkdir train
 # COPY trainingwheel.sh train
